@@ -1,0 +1,10 @@
+[Unit]
+Description=Disable brcmfmac kernel module on shutdown
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rmmod brcmfmac
+
+[Install]
+WantedBy=shutdown.target
